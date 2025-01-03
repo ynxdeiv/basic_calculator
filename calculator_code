@@ -1,0 +1,13 @@
+def calculator (number1,number2,operator):
+    if operator == "+":
+        result = number1+number2
+    elif operator== "-":
+        result = number1-number2
+    elif operator== "*":
+        result = number1*number2
+    elif operator== "/":
+        result = round(number1/number2, 2)
+    return result
+
+#example below
+print((calculator(3,3,"+")))
