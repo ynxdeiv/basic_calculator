@@ -1,13 +1,25 @@
-def calculator (number1,number2,operator):
-    if operator == "+":
-        result = number1+number2
-    elif operator== "-":
-        result = number1-number2
-    elif operator== "*":
-        result = number1*number2
-    elif operator== "/":
-        result = round(number1/number2, 2)
-    return result
+from tkinter import *
+from tkinter import ttk
+import random
 
-#example below
-print((calculator(3,3,"+")))
+
+root = Tk()
+root.title('Calculator')
+
+mainframe = ttk.Frame(root, padding="5 4 12 12")
+mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0,weight=1)
+
+ttk.Button(mainframe, text="0", ).grid(column=2, row=4, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="1", ).grid(column=1, row=3, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="2", ).grid(column=2, row=3, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="3", ).grid(column=3, row=3, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="4", ).grid(column=1, row=2, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="5", ).grid(column=2, row=2, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="6", ).grid(column=3, row=2, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="7", ).grid(column=1, row=1, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="8", ).grid(column=2, row=1, sticky=(N, W ,E, S))
+ttk.Button(mainframe, text="9", ).grid(column=3, row=1, sticky=(N, W ,E, S))
+
+root.mainloop()
