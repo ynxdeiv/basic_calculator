@@ -6,20 +6,15 @@ import random
 root = Tk()
 root.title('Calculator')
 
-mainframe = ttk.Frame(root, padding="5 4 12 12")
+mainframe = ttk.Frame(root, padding="12 12 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0,weight=1)
 
-ttk.Button(mainframe, text="0", ).grid(column=2, row=4, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="1", ).grid(column=1, row=3, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="2", ).grid(column=2, row=3, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="3", ).grid(column=3, row=3, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="4", ).grid(column=1, row=2, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="5", ).grid(column=2, row=2, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="6", ).grid(column=3, row=2, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="7", ).grid(column=1, row=1, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="8", ).grid(column=2, row=1, sticky=(N, W ,E, S))
-ttk.Button(mainframe, text="9", ).grid(column=3, row=1, sticky=(N, W ,E, S))
+
+buttons=[("+/-",1,4),("0",2,4),("1",1,3),("2",2,3),("3",3,3),("4",1,2),("5",2,2),("6",3,2),("7",1,1),("8",2,1),("9",3,1),("=",3,4)]
+
+for text, col,row in buttons:
+    ttk.Button(mainframe, text=text, ).grid(column=col, row=row, sticky=(N, W ,E, S))
 
 root.mainloop()
